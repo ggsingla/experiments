@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro', monospace;
+    color: #333;
+}
+body{
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: whitesmoke;
+}
+h1{
+    font-family: 'Source Code Pro', monospace;
+
+    font-size: 3rem;
+    margin-bottom: 1em;
+    font-weight: 600;
+    position:relative;
+}
+h1::before, h1::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+h1::before{
+    background-color: whitesmoke;
+    animation: typewriter 4s 1s steps(25) forwards ;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+h1::after{
+    width: 0.1em;
+    background-color: #333;
+    opacity: 0;
+    animation : typewriter 4s 1s steps(25) forwards,
+                blinker 500ms ease infinite;
+}
+p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3em);
+    animation: fader 1s ease-in 5s forwards;
+}
+
+@keyframes typewriter {
+    to{
+        left: 100%;
+    }
+}
+
+@keyframes blinker {
+    to{
+        opacity: 100%;
+    }
+}
+
+@keyframes fader {
+    to{
+        opacity: 100;
+        transform: translateY(0);
+    }
+}
