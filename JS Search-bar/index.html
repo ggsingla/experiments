@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Search-Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="search-wrapper">
+            <label for="search">Search Users</label>
+            <input autocomplete="off" type="text" placeholder="Type here..." id="search">
+        </div>
+        <div id="cards-wrapper" class="cards-wrapper">
+
+
+        </div>
+        <template id="card-template">
+            <div class="card">
+                <header id="name" class="name"></header>
+                <p id="email"></p>
+            </div>
+        </template>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
